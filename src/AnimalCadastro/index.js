@@ -20,7 +20,7 @@ import { useForm } from "react-hook-form";
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
-import Foto from "./cadastro.jpg";
+import Foto from "./dog-red.jpg";
 import {
   Layout,
   Image,
@@ -45,7 +45,7 @@ const Cadastro = () => {
   return (
     <>
       <Layout>
-        <Image src={Foto} alt="Pessoa estudando" />
+      <Image src={Foto} alt="Pessoa estudando" />
         <Content>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Title>PETGATO</Title>
