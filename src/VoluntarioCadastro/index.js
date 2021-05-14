@@ -20,7 +20,7 @@ import { useForm } from "react-hook-form";
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
-import Foto from "./cadastro.jpg";
+import Foto from "./doguinho.jpg";
 import {
   Layout,
   Image,
@@ -33,30 +33,20 @@ import {
   GoRegister,
 } from "./styles";
 
-const Cadastro = () => {
+const VoluntarioCadastro = () => {
   const { register, handleSubmit, errors, setError } = useForm();
 
 
 
   const onSubmit = (data) => {
     const p = {
-      people:{
+      volunteers:{
         CPF: data.cpf,
         nome: data.nome,
         RG: data.rg,
         data_nasc: data.data_nasc,
         genero: data.genero,
         email: data.email,
-        address_attributes:{
-          CEP: data.cep,
-          endereco: data.endereco,
-          numero: data.numero,
-          complemento: data.complemento,
-          pais: data.pais,
-          estado: data.estado,
-          cidade: data.cidade,
-          bairro: data.bairro,
-        }
       }
       
     }
@@ -70,7 +60,7 @@ const Cadastro = () => {
         <Content>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Title>PETGATO</Title>
-            <Section>Cadastro de Pessoa para Adoção</Section>
+            <Section>Cadastro de Voluntário</Section>
             <Grid>
               <Input
                 
@@ -116,62 +106,6 @@ const Cadastro = () => {
                 errors={errors}
               />
               <Input
-                
-                placeholder="CEP"
-                type="text"
-                {...register('cep', { required: true })}
-                errors={errors}
-              />
-              <Input
-                
-                placeholder="Endereço"
-                type="text"
-                {...register('endereco', { required: true })}
-                errors={errors}
-              />
-              <Input
-                
-                placeholder="Numero"
-                type="text"
-                {...register('numero', { required: true })}
-                errors={errors}
-              />
-              <Input
-                
-                placeholder="Complemento"
-                type="text"
-                {...register('complemento')}
-                errors={errors}
-              />
-                <Input
-                  
-                  placeholder="Bairro"
-                  type="text"
-                  {...register('bairro')}
-                  errors={errors}
-                />
-              <Input
-                
-                placeholder="Cidade"
-                type="text"
-                {...register('cidade')}
-                errors={errors}
-              />
-              <Input
-                
-                placeholder="Estado"
-                type="text"
-                {...register('estado')}
-                errors={errors}
-              />
-              <Input
-                
-                placeholder="País"
-                type="text"
-                {...register('pais')}
-                errors={errors}
-              />
-              <Input
                 placeholder="Senha"
                 type="password"
                 {...register('senha', { required: true })}
@@ -188,4 +122,4 @@ const Cadastro = () => {
   );
 };
 
-export default Cadastro;
+export default VoluntarioCadastro;

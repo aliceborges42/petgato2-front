@@ -1,9 +1,10 @@
 export default {
     home: "/",
     register: "/register",
+    volutaryregister: "/voluntaryregister",
     login: "/login",
     dashboard: "/dashboard",
     animal: "/animal",
-    tipo_animal: "/tipo_animal"
+    tipoanimal: "/tipoanimal",
   };
   

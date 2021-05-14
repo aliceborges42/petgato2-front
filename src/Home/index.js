@@ -6,13 +6,16 @@ const Home = () => {
         <>
             <ul>
                 <li>
+                <li>
+                    <Link to = "/voluntaryregister"> Cadastro de Voluntário</Link>
+                </li>
                     <Link to = "/dashboard"> Dashboard</Link>
                 </li>
                 <li>
                     <Link to = "/register"> Cadastro</Link>
                 </li>
                 <li>
-                    <Link to = "/tipo_animal"> Tipo Animal</Link>
+                    <Link to = "/tipoanimal"> Tipo Animal</Link>
                 </li>
             </ul>
         </>

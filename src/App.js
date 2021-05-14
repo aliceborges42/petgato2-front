@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Cadastro from './Cadastro';
+import VoluntarioCadastro from './VoluntarioCadastro';
 import Login from './Login';
 import TipoAnimal from './TipoAnimal';
 import Home from './Home';
@@ -8,7 +9,7 @@ import Dashboard from './DashBoard';
 import routes from "./routes";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const { home, register, login, dashboard, animal, tipo_animal } = routes;
+const { home, register, login, dashboard, animal, tipoanimal, voluntaryregister } = routes;
 
 function App() {
   return (
@@ -21,13 +22,16 @@ function App() {
             <Route exact path={dashboard}>
               <Dashboard />
             </Route>
-            <Route path={register}>
+            <Route exact path={register}>
               <Cadastro />
             </Route>
-            <Route path={login}>
+            <Route exact path={voluntaryregister}>
+              <VoluntarioCadastro />
+            </Route>
+            <Route exact path={login}>
               <Login />
             </Route>
-            <Route path={tipo_animal}>
+            <Route exact path={tipoanimal}>
               <TipoAnimal />
             </Route>
           </Switch>
